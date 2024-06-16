@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bckcbriipq73g"]
+
+[ext_resource type="Script" path="res://scripts/DungeonGenerator.gd" id="1_cah65"]
+[ext_resource type="TileSet" uid="uid://b8wu2ro5k3jhy" path="res://assets/tileset.tres" id="2_ucrl0"]
+
+[node name="Main" type="Node2D"]
+
+[node name="LevelContainer" type="Node2D" parent="."]
+
+[node name="DungeonGenerator" type="Node2D" parent="LevelContainer"]
+script = ExtResource("1_cah65")
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = ExtResource("2_ucrl0")
+rendering_quadrant_size = 12
+format = 2
