@@ -5,7 +5,6 @@ class_name Grid
 # Block size setup
 const map_size = 5    # rooms
 const room_size = 16  # blocks
-const block_size = 12 # pixels ? ( Currently is the Label size )
 # Map size setup
 var map_dimensions = Vector2( map_size, map_size )
 # Room size setup

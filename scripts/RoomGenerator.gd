@@ -4,7 +4,6 @@ extends Node2D
 # Block size setup
 const map_size = 5    # rooms
 const room_size = 16  # blocks
-const block_size = 12 # pixels ? ( Currently is the Label size )
 # Map size setup
 var map_dimensions = Vector2( map_size, map_size )
 # Room size setup
@@ -46,15 +45,21 @@ func draw_room( room_starting_coords: Vector2, room_ending_coords: Vector2, entr
 			draw_block( block_pos, is_wall, is_door, is_room_empty )
 
 func draw_block( block_pos: Vector2, is_wall: bool, is_door: bool, is_room_empty: bool ):
+	const layer_floor = 0
+	const layer_walls = 1
 	var tile_id = -1
+	var layer = -1 
 	
 	if not is_room_empty:
 		if is_door:
 			tile_id = find_tile_id( Vector2i( 10, 1 ) )   # Atlas coordinates for doors
+			layer = layer_walls
 		elif is_wall:
 			tile_id = find_tile_id( Vector2i( 0, 2 ) )   # Atlas coordinates for walls
+			layer = layer_walls
 		else:
 			tile_id = find_tile_id( Vector2i( 8, 5 ) )   # Atlas coordinates for floors
+			layer = layer_floor
 	else:
 		var random_value = randi() % 100 # 0 - 100
 		const void_spawn_chance = 90
@@ -62,10 +67,11 @@ func draw_block( block_pos: Vector2, is_wall: bool, is_door: bool, is_room_empty
 		if random_value <= void_spawn_chance:
 			# 80% change
 			tile_id = find_tile_id( Vector2i( 16, 0 ) )   # Atlas coordinates for empty rooms / void
+			layer = layer_floor
 		else:
 			# 20% chance
 			tile_id = find_tile_id( Vector2i( 2, 34 ) )   # Atlas coordinates for empty rooms / trees
+			layer = layer_floor
 	
 	if tile_id != Vector2i( -1, -1 ):
-		tile_map.set_cell( 0, block_pos, 0, tile_id )
-
+		tile_map.set_cell( layer, block_pos, 0, tile_id )
