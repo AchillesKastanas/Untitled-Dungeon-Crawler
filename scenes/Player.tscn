@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cmnnims2rix15"]
 
-[ext_resource type="Script" path="res://scenes/PlayerController.gd" id="1_e4rd0"]
+[ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_f2uly"]
 [ext_resource type="Texture2D" uid="uid://dpd4dcgq6i5sm" path="res://assets/sprites/spritesheet.png" id="1_hgds6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rokba"]
@@ -11,7 +11,7 @@ height = 12.0
 z_index = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_e4rd0")
+script = ExtResource("1_f2uly")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 texture_filter = 1
@@ -22,3 +22,6 @@ region_rect = Rect2(1, 209, 12, 12)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_rokba")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(3, 3)
