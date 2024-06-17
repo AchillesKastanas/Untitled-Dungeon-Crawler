@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://bckcbriipq73g"]
+[gd_scene load_steps=7 format=3 uid="uid://bckcbriipq73g"]
 
 [ext_resource type="Script" path="res://scripts/DungeonGenerator.gd" id="1_cah65"]
 [ext_resource type="TileSet" uid="uid://b8wu2ro5k3jhy" path="res://assets/tileset.tres" id="2_ucrl0"]
 [ext_resource type="Script" path="res://scripts/RoomGenerator.gd" id="3_g0c5g"]
 [ext_resource type="PackedScene" uid="uid://cmnnims2rix15" path="res://scenes/Player.tscn" id="4_oru1s"]
+
+[sub_resource type="Gradient" id="Gradient_421t1"]
+offsets = PackedFloat32Array(0, 0.69)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_iomba"]
+gradient = SubResource("Gradient_421t1")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [node name="Main" type="Node2D"]
 
@@ -27,3 +38,12 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("4_oru1s")]
 position = Vector2(61, 58)
+
+[node name="WorldDarkener" type="DirectionalLight2D" parent="."]
+energy = 0.8
+blend_mode = 1
+
+[node name="TorchTester" type="PointLight2D" parent="."]
+position = Vector2(15, 96)
+color = Color(0.963362, 0.889066, 0.717668, 1)
+texture = SubResource("GradientTexture2D_iomba")

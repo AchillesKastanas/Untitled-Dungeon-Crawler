@@ -64,7 +64,8 @@ script = ExtResource("1_f2uly")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_l4qnn")
 animation = &"player_sprint_animation"
-frame_progress = 0.694155
+frame = 1
+frame_progress = 0.0439076
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_rokba")
