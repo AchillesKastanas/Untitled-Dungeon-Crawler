@@ -1,3 +1,4 @@
 res://scenes/Player.tscn
 res://assets/tileset.tres
+res://scripts/PlayerController.gd
 res://scenes/Main.tscn

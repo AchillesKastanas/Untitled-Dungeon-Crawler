@@ -1,7 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmnnims2rix15"]
+[gd_scene load_steps=9 format=3 uid="uid://cmnnims2rix15"]
 
 [ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_f2uly"]
-[ext_resource type="Texture2D" uid="uid://dpd4dcgq6i5sm" path="res://assets/sprites/spritesheet.png" id="1_hgds6"]
+[ext_resource type="Texture2D" uid="uid://1vnpkhbvqspc" path="res://assets/sprites/player.png" id="2_x26mw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6ull"]
+atlas = ExtResource("2_x26mw")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igbbq"]
+atlas = ExtResource("2_x26mw")
+region = Rect2(36, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp86h"]
+atlas = ExtResource("2_x26mw")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7jyl"]
+atlas = ExtResource("2_x26mw")
+region = Rect2(24, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4qnn"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6ull")
+}],
+"loop": true,
+"name": &"player_idle_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igbbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp86h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7jyl")
+}],
+"loop": true,
+"name": &"player_sprint_animation",
+"speed": 3.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rokba"]
 radius = 4.0
@@ -11,16 +57,16 @@ height = 12.0
 z_index = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_mask = 2
 script = ExtResource("1_f2uly")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 texture_filter = 1
-texture = ExtResource("1_hgds6")
-region_enabled = true
-region_rect = Rect2(1, 209, 12, 12)
+sprite_frames = SubResource("SpriteFrames_l4qnn")
+animation = &"player_sprint_animation"
+frame_progress = 0.694155
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_rokba")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
