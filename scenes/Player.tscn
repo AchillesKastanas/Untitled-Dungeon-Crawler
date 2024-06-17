@@ -8,6 +8,7 @@ radius = 4.0
 height = 12.0
 
 [node name="Player" type="Node2D"]
+z_index = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_e4rd0")

@@ -1,6 +1,3 @@
-res://scenes/Main.tscn
-res://assets/tileset.tres
-res://scripts/RoomGenerator.gd
-res://scripts/DungeonGenerator.gd
 res://scenes/Player.tscn
-res://scenes/PlayerController.gd
+res://assets/tileset.tres
+res://scenes/Main.tscn

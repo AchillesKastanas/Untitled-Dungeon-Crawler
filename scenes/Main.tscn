@@ -22,6 +22,7 @@ rendering_quadrant_size = 12
 format = 2
 layer_0/name = "floor_layer"
 layer_1/name = "wall_layer"
+layer_1/z_index = 2
 layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("4_oru1s")]
