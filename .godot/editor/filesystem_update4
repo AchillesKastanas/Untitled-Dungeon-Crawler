@@ -1,4 +1,5 @@
-res://scenes/Player.tscn
-res://assets/tileset.tres
-res://scripts/PlayerController.gd
 res://scenes/Main.tscn
+res://assets/tileset.tres
+res://scenes/Player.tscn
+res://scenes/Item.tscn
+res://scripts/ItemBehaviour.gd
