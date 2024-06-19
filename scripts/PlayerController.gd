@@ -28,3 +28,6 @@ func update_animation():
 func update_facing_direction():
 	if velocity.x != 0:
 		$AnimatedSprite2D.flip_h = velocity.x < 0
+
+func _on_item_picked_up():
+	print( "[Player] receieved an item" )

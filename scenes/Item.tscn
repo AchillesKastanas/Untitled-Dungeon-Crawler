@@ -6,7 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3yb4g"]
 radius = 8.0
 
-[node name="Area2D" type="Area2D"]
+[node name="Item" type="Area2D" groups=["dropped_item"]]
 script = ExtResource("1_dmndc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,5 +1,6 @@
 extends Area2D
 
+
 signal item_picked_up
 
 func _ready():
@@ -7,5 +8,7 @@ func _ready():
 
 func _on_body_enterered( body: Node ):
 	if body.is_in_group( "player" ):
-		print( "the player picked up the item" )
+		print( "the item was picked up" )
+		item_picked_up.emit()
+		# Remove the item from the scene tree
 		queue_free()

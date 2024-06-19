@@ -3,3 +3,5 @@ res://assets/tileset.tres
 res://scenes/Player.tscn
 res://scenes/Item.tscn
 res://scripts/ItemBehaviour.gd
+res://scripts/PlayerController.gd
+res://scenes/GameManager.gd
