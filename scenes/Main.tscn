@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bckcbriipq73g"]
 
 [ext_resource type="Script" path="res://scripts/DungeonGenerator.gd" id="1_cah65"]
-[ext_resource type="Script" path="res://GameManager.gd" id="1_hqdpl"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_hqdpl"]
 [ext_resource type="TileSet" uid="uid://b8wu2ro5k3jhy" path="res://assets/tileset.tres" id="2_ucrl0"]
 [ext_resource type="Script" path="res://scripts/RoomGenerator.gd" id="3_g0c5g"]
 [ext_resource type="PackedScene" uid="uid://cmnnims2rix15" path="res://scenes/Player.tscn" id="4_oru1s"]

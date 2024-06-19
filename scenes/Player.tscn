@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmnnims2rix15"]
+[gd_scene load_steps=10 format=3 uid="uid://cmnnims2rix15"]
 
+[ext_resource type="Script" path="res://scripts/InventoryManager.gd" id="1_1sa6b"]
 [ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_f2uly"]
 [ext_resource type="Texture2D" uid="uid://1vnpkhbvqspc" path="res://assets/sprites/player.png" id="2_x26mw"]
 
@@ -55,6 +56,9 @@ height = 12.0
 
 [node name="Player" type="Node2D"]
 z_index = 1
+
+[node name="InventoryManager" type="Node2D" parent="."]
+script = ExtResource("1_1sa6b")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 collision_mask = 2

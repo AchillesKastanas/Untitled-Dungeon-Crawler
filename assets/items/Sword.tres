@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemTemplate" load_steps=2 format=3 uid="uid://s0coci8x1tyo"]
+
+[ext_resource type="Script" path="res://scripts/templates/ItemTemplate.gd" id="1_ywppp"]
+
+[resource]
+script = ExtResource("1_ywppp")
+name = "Sword"
+description = "Just a sword"
+item_type = "WEAPON"
+stackable = false
+max_stack_size = 1
