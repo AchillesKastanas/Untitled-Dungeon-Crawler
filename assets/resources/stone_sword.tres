@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Sword" load_steps=2 format=3 uid="uid://j5kwv3wjyo8k"]
+
+[ext_resource type="Script" path="res://scripts/templates/Sword.gd" id="1_oht6a"]
+
+[resource]
+script = ExtResource("1_oht6a")
+damage = 0
+name = ""
+description = ""
+scene_path = ""

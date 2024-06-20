@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var ItemResource: ItemTemplate
+@export var ItemResource: Item
 
 # Player Gear Slots
 enum GearSlot {

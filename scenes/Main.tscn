@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://b8wu2ro5k3jhy" path="res://assets/tileset.tres" id="2_ucrl0"]
 [ext_resource type="Script" path="res://scripts/RoomGenerator.gd" id="3_g0c5g"]
 [ext_resource type="PackedScene" uid="uid://cmnnims2rix15" path="res://scenes/Player.tscn" id="4_oru1s"]
-[ext_resource type="PackedScene" uid="uid://bodd5mbghhb2e" path="res://scenes/Item.tscn" id="5_n6c0q"]
+[ext_resource type="PackedScene" uid="uid://0v6ueexi7815" path="res://scenes/item/DroppedItem.tscn" id="5_3vjmf"]
 
 [sub_resource type="Gradient" id="Gradient_421t1"]
 offsets = PackedFloat32Array(0, 0.69)
@@ -41,7 +41,7 @@ layer_1/tile_data = PackedInt32Array()
 
 [node name="DroppedItems" type="Node2D" parent="LevelContainer"]
 
-[node name="Item" parent="LevelContainer/DroppedItems" instance=ExtResource("5_n6c0q")]
+[node name="DroppedItem" parent="LevelContainer/DroppedItems" groups=["dropped_item"] instance=ExtResource("5_3vjmf")]
 position = Vector2(105, 59)
 
 [node name="Player" parent="." instance=ExtResource("4_oru1s")]

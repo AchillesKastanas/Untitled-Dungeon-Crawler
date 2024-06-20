@@ -1,47 +1,35 @@
 extends Node2D
 
-# Player Gear Slots
-enum GearSlot {
-	HELMET,
-	ARMOUR,
-	BACKPACK,
-	WEAPON,
-}
+@export var helmet: Resource
+@export var armour: Resource
+@export var weapon: Resource
+@export var slots: Array = []
 
-# Inventory Dictionary
-var inventory = {
-	GearSlot.HELMET: null,
-	GearSlot.ARMOUR: null,
-	GearSlot.BACKPACK: null,
-	GearSlot.WEAPON: null,
-}
+# Add item to backpack
+func add_to_backpack(item: Resource):
+	slots.append(item)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+# Equip items
+func equip_helmet(item: Resource):
+	helmet = item
 
-# Add item to the players inventory
-func equip_item( gearSlot: GearSlot, item: ItemTemplate ) -> bool:
-	if gearSlot in inventory:
-		if inventory[gearSlot] == null:
-			inventory[gearSlot] = item
-			print( "Added item: ", item.name, " to slot: ", gearSlot )
-			return true
-		else:
-			print( "Slot: ", gearSlot, " already occupied." )
-	else:
-		print("Invalid slot: ", gearSlot )
-	return false
+func equip_armour(item: Resource):
+	armour = item
 
-# Remove item from the players inventory
-func remove_item( gearSlot: GearSlot ) -> bool:
-	if gearSlot in inventory:
-		inventory[gearSlot] = null
-		return true
-	else:
-		print("Invalid slot.")
-	return false
+func equip_weapon(item: Resource):
+	weapon = item
+
+# Unequip items
+func unequip_helmet():
+	helmet = null
+
+func unequip_armour():
+	armour = null
+
+func unequip_weapon():
+	weapon = null
 
 # Triggers whenever an item is picked up
-func _on_item_picked_up( gearSlot: GearSlot, item: ItemTemplate ):
-	equip_item( gearSlot, item  )
+func _on_item_picked_up():
+	#equip_item( gearSlot, item  )
+	print( "signal recieved" )

@@ -1,3 +1,3 @@
-ItemTemplate
+Sword
 AtlasTexture
 TileSet

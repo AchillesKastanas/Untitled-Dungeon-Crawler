@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://0v6ueexi7815"]
+
+[ext_resource type="PackedScene" uid="uid://cjh1x7s833u3l" path="res://scenes/item/Item.tscn" id="1_1g7u2"]
+[ext_resource type="Script" path="res://scenes/item/DroppedItem.gd" id="1_hedrr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_35bnc"]
+radius = 8.0
+
+[node name="DroppedItem" type="Area2D"]
+script = ExtResource("1_hedrr")
+
+[node name="Item" parent="." instance=ExtResource("1_1g7u2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_35bnc")
