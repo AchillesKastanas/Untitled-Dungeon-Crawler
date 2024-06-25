@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://2npu8p8l2oqi"]
+
+[ext_resource type="Texture2D" uid="uid://cao18pubeo1iu" path="res://assets/sprites/enemy.png" id="1_cgfpt"]
+[ext_resource type="Script" path="res://scripts/RagdollManager.gd" id="1_nl1wt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wa60o"]
+radius = 3.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ws5m"]
+size = Vector2(13.5135, 16)
+
+[node name="Enemy" type="Node2D"]
+
+[node name="EnemyManager" type="Node2D" parent="."]
+
+[node name="Head" type="RigidBody2D" parent="."]
+position = Vector2(0, -6)
+collision_mask = 3
+gravity_scale = 0.0
+script = ExtResource("1_nl1wt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head"]
+position = Vector2(-1, -2.255)
+shape = SubResource("CircleShape2D_wa60o")
+
+[node name="Sprite2D" type="Sprite2D" parent="Head"]
+texture_filter = 1
+texture = ExtResource("1_cgfpt")
+region_enabled = true
+region_rect = Rect2(12, 0, 12, 12)
+
+[node name="Body" type="RigidBody2D" parent="."]
+position = Vector2(0, -6.08)
+collision_mask = 3
+gravity_scale = 0.0
+script = ExtResource("1_nl1wt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
+position = Vector2(0.5, 3)
+scale = Vector2(0.37, 0.37)
+shape = SubResource("RectangleShape2D_3ws5m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Body"]
+texture_filter = 1
+texture = ExtResource("1_cgfpt")
+region_enabled = true
+region_rect = Rect2(0, 0, 12, 12)

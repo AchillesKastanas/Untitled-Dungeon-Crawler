@@ -3,7 +3,7 @@ extends Node2D
 
 # Block size setup
 const map_size = 5    # rooms
-const room_size = 16  # blocks
+const room_size = 32  # blocks
 # Map size setup
 var map_dimensions = Vector2( map_size, map_size )
 # Room size setup
