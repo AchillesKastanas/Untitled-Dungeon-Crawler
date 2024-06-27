@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 200
+@export var speed = 150
 
 func _ready():
 	$AnimatedSprite2D.play("player_idle_animation")

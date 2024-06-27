@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ouai6nkyfa5"]
+
+[ext_resource type="Texture2D" uid="uid://bbfu727gmmxu8" path="res://assets/sprites/weapon_fists.png" id="1_xmvc7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vwcf"]
+atlas = ExtResource("1_xmvc7")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0411"]
+atlas = ExtResource("1_xmvc7")
+region = Rect2(12, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5psk7"]
+atlas = ExtResource("1_xmvc7")
+region = Rect2(24, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eurli"]
+atlas = ExtResource("1_xmvc7")
+region = Rect2(36, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xy7pr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vwcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0411")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5psk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eurli")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyt4k"]
+size = Vector2(4, 4)
+
+[node name="WeaponFists" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_xy7pr")
+animation = &"attack"
+frame = 3
+frame_progress = 0.155646
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_uyt4k")
