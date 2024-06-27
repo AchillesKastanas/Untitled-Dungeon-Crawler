@@ -58,7 +58,7 @@ func draw_block( block_pos: Vector2, is_wall: bool, is_door: bool, is_room_empty
 			tile_id = find_tile_id( Vector2i( 0, 2 ) )   # Atlas coordinates for walls
 			layer = layer_walls
 		else:
-			tile_id = find_tile_id( Vector2i( 8, 5 ) )   # Atlas coordinates for floors
+			tile_id = find_tile_id( Vector2i( 56, 1 ) )   # Atlas coordinates for floors
 			layer = layer_floor
 	else:
 		var random_value = randi() % 100 # 0 - 100

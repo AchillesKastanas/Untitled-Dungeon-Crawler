@@ -1,7 +1,8 @@
-res://scenes/Enemy.tscn
-res://assets/tileset.tres
-res://scenes/RagdollManager.gd
-res://scenes/Main.tscn
 res://scenes/Player.tscn
+res://assets/tileset.tres
+res://scenes/Main.tscn
+res://scenes/Enemy.tscn
 res://scenes/item/Item.tscn
 res://scenes/item/DroppedItem.tscn
+res://scripts/PointerArrowController.gd
+res://scripts/RoomGenerator.gd
