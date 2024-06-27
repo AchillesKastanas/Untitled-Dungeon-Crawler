@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmnnims2rix15"]
+[gd_scene load_steps=13 format=3 uid="uid://cmnnims2rix15"]
 
 [ext_resource type="Script" path="res://scripts/InventoryManager.gd" id="1_1sa6b"]
 [ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_f2uly"]
 [ext_resource type="Texture2D" uid="uid://1vnpkhbvqspc" path="res://assets/sprites/player.png" id="2_x26mw"]
 [ext_resource type="Texture2D" uid="uid://bu6ux3tvcdve2" path="res://assets/sprites/pointer_arrow.png" id="4_2gxas"]
 [ext_resource type="Script" path="res://scripts/PointerArrowController.gd" id="4_5q41f"]
+[ext_resource type="Script" path="res://scripts/CameraManager.gd" id="4_6l3cj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6ull"]
 atlas = ExtResource("2_x26mw")
@@ -75,8 +76,14 @@ frame_progress = 0.758898
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_rokba")
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" node_paths=PackedStringArray("character_body")]
 zoom = Vector2(3, 3)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 7.5
+script = ExtResource("4_6l3cj")
+camera_zoom = 5
+character_body = NodePath("..")
 
 [node name="PointerArrow" type="Node2D" parent="CharacterBody2D" node_paths=PackedStringArray("character_body")]
 script = ExtResource("4_5q41f")

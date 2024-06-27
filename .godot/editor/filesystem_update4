@@ -6,3 +6,4 @@ res://scenes/item/Item.tscn
 res://scenes/item/DroppedItem.tscn
 res://scripts/PointerArrowController.gd
 res://scripts/RoomGenerator.gd
+res://scripts/CameraManager.gd
