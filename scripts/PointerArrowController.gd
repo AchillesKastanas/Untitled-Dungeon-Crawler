@@ -8,3 +8,10 @@ func _process(delta):
 	
 	var arrow_angle = ( mouse_pos - character_pos ).normalized()
 	rotation = arrow_angle.angle()
+
+func _input(event):
+	# Check for zoom in and zoom out actions
+	if Input.is_action_pressed("player_attack"):
+		hide()
+	else:
+		show()

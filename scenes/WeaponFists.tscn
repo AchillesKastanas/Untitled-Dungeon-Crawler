@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5ouai6nkyfa5"]
+[gd_scene load_steps=8 format=3 uid="uid://dibeqvogfwudm"]
 
 [ext_resource type="Texture2D" uid="uid://bbfu727gmmxu8" path="res://assets/sprites/weapon_fists.png" id="1_xmvc7"]
 
@@ -35,11 +35,11 @@ animations = [{
 }],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyt4k"]
-size = Vector2(4, 4)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjyd8"]
+size = Vector2(10.5, 8)
 
 [node name="WeaponFists" type="Node2D"]
 
@@ -47,9 +47,14 @@ size = Vector2(4, 4)
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xy7pr")
 animation = &"attack"
-frame = 3
-frame_progress = 0.155646
+autoplay = "attack"
+frame_progress = 0.726886
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, -1)
-shape = SubResource("RectangleShape2D_uyt4k")
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+gravity_scale = 1.66533e-16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(4, -1)
+shape = SubResource("RectangleShape2D_kjyd8")
