@@ -1,8 +1,6 @@
-res://scripts/ItemBehaviour.gd
 res://scenes/WeaponFists.tscn
-res://scenes/Player.tscn
-res://scenes/PlayerWeaponController.gd
-res://scripts/PointerArrowController.gd
-res://scenes/Enemy.tscn
 res://assets/tileset.tres
+res://scenes/PlayerWeaponController.gd
+res://scenes/Player.tscn
+res://scenes/Enemy.tscn
 res://scenes/Main.tscn

@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjyd8"]
-size = Vector2(10.5, 8)
+size = Vector2(14.25, 12)
 
 [node name="WeaponFists" type="Node2D"]
 
@@ -48,13 +48,16 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_xy7pr")
 animation = &"attack"
 autoplay = "attack"
-frame_progress = 0.726886
+frame_progress = 0.830272
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 collision_layer = 4
 collision_mask = 0
+mass = 5.0
 gravity_scale = 1.66533e-16
+freeze = true
+freeze_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(4, -1)
+position = Vector2(5.875, -1)
 shape = SubResource("RectangleShape2D_kjyd8")
