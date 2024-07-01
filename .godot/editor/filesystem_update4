@@ -1,6 +1,7 @@
 res://scenes/WeaponFists.tscn
 res://assets/tileset.tres
-res://scenes/PlayerWeaponController.gd
+res://scripts/InventoryManager.gd
 res://scenes/Player.tscn
 res://scenes/Enemy.tscn
 res://scenes/Main.tscn
+res://scripts/GameManager.gd

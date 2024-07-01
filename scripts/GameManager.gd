@@ -3,8 +3,8 @@ extends Node2D
 func _ready():
 	# TODO - Transfer to an Item Dropper Manager 
 	# Drop an item on the ground for pickups
-	var new_dropped_item = load( "res://assets/resources/stone_sword.tres" ) as Resource
-	render_item( new_dropped_item )
+	# var new_dropped_item = load( "res://assets/resources/stone_sword.tres" ) as Resource
+	# render_item( new_dropped_item )
 	
 	# Check if items have dropped in the group
 	var dropped_items = get_tree().get_nodes_in_group("dropped_item")

@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bu6ux3tvcdve2" path="res://assets/sprites/pointer_arrow.png" id="4_2gxas"]
 [ext_resource type="Script" path="res://scripts/PointerArrowController.gd" id="4_5q41f"]
 [ext_resource type="Script" path="res://scripts/CameraManager.gd" id="4_6l3cj"]
-[ext_resource type="Script" path="res://scenes/PlayerWeaponController.gd" id="7_ns3i3"]
+[ext_resource type="Script" path="res://scripts/PlayerWeaponController.gd" id="7_0772v"]
 [ext_resource type="PackedScene" uid="uid://dibeqvogfwudm" path="res://scenes/WeaponFists.tscn" id="8_32cma"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6ull"]
@@ -99,5 +99,5 @@ texture = ExtResource("4_2gxas")
 
 [node name="Weapon" type="Node2D" parent="."]
 position = Vector2(10, 2.08165e-12)
-script = ExtResource("7_ns3i3")
+script = ExtResource("7_0772v")
 player_weapon = ExtResource("8_32cma")
