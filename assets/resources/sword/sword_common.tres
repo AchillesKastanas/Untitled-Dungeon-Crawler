@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Item" load_steps=5 format=3 uid="uid://cfen2sm5q26rf"]
+
+[ext_resource type="Texture2D" uid="uid://dt3dkht1nvsb8" path="res://assets/sprites/sword.png" id="1_2irde"]
+[ext_resource type="Script" path="res://scripts/templates/Item.gd" id="2_motd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01qpo"]
+resource_local_to_scene = true
+atlas = ExtResource("1_2irde")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vewd"]
+resource_local_to_scene = true
+atlas = ExtResource("1_2irde")
+region = Rect2(0, 0, 12, 12)
+
+[resource]
+script = ExtResource("2_motd4")
+name = "Common Sword"
+texture = SubResource("AtlasTexture_1vewd")
+damage = 5.0
+icon = SubResource("AtlasTexture_01qpo")
+animation = "sword"
+projectile = 0

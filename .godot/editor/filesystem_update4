@@ -1,7 +1,9 @@
-res://scenes/WeaponFists.tscn
-res://assets/tileset.tres
-res://scripts/InventoryManager.gd
-res://scenes/Player.tscn
-res://scenes/Enemy.tscn
 res://scenes/Main.tscn
+res://assets/resources/sword/sword_common.tres
+res://assets/tileset.tres
+res://scenes/Player.tscn
+res://scripts/Player.gd
+res://scenes/item/ItemOnGround.tscn
+res://scenes/item/ItemOnGround.gd
+res://scripts/InventoryManager.gd
 res://scripts/GameManager.gd

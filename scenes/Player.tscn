@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://cmnnims2rix15"]
+[gd_scene load_steps=16 format=3 uid="uid://cmnnims2rix15"]
 
 [ext_resource type="Script" path="res://scripts/InventoryManager.gd" id="1_1sa6b"]
 [ext_resource type="Script" path="res://scripts/PlayerController.gd" id="1_f2uly"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_gcdp2"]
 [ext_resource type="Texture2D" uid="uid://1vnpkhbvqspc" path="res://assets/sprites/player.png" id="2_x26mw"]
 [ext_resource type="Texture2D" uid="uid://bu6ux3tvcdve2" path="res://assets/sprites/pointer_arrow.png" id="4_2gxas"]
 [ext_resource type="Script" path="res://scripts/PointerArrowController.gd" id="4_5q41f"]
@@ -61,6 +62,7 @@ height = 12.0
 
 [node name="Player" type="Node2D"]
 z_index = 1
+script = ExtResource("1_gcdp2")
 
 [node name="InventoryManager" type="Node2D" parent="."]
 script = ExtResource("1_1sa6b")

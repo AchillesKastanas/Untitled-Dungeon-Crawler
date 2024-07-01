@@ -7,6 +7,7 @@ extends Node2D
 
 # Add item to backpack
 func add_to_backpack(item: Resource):
+	print( "[Backpack] Added Item: ", item.get( "name" ) )
 	slots.append(item)
 
 # Equip items
@@ -32,4 +33,4 @@ func unequip_weapon():
 # Triggers whenever an item is picked up
 func _on_item_picked_up():
 	#equip_item( gearSlot, item  )
-	print( "signal recieved" )
+	print( "signal recieved by inventory" )
